@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project|Bill Splitter </title>
+    <link rel="stylesheet" href="./StyleBS.css">
+</head>
+<body>
+    <!-- Header  -->
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <nav>
+      <ul>
+		<li class="list"><a href="../Passward Validater/IndexP.html" class="listlink">Passward Validater</a></li>
+		<li class="list"><a href="../Calculator/IndexC.html" class="listlink">Calculatar</a></li>
+		<li class="list"><a href="../Color Mixer/IndexCM.html" class="listlink">Color Mixer</a></li>
+		<li class="list"><a href="../Highest Marks/IndexHM.html" class="listlink">Highest Marks</a></li>
+		<li class="list"><a href="../Capitailze/IndexCa.html" class="listlink">Capitailze</a></li>
+		<li class="list"><a href="../Vowel Counter/IndexV.html" class="listlink">Vowel Counter</a></li>
+		<li class="list"><a href="../Remove Duplicate/IndexRD.html" class="listlink">Remove Duplicate</a></li>
+		<li class="list"><a href="../Inverted Right Angle Triangle Pa. with Asterisks/IndexRAT.html" class="listlink">Triangle Magic </a></li>
+		<li class="list"><a href="../Chesk for divisibility/IndexCD.html" class="listlink">Check for divisibility</li>
+		<li class="list"><a href="../Correct a Bug/IndexCB.html" class="listlink">Correct a Bug </a></li>
+		<li class="list"><a href="../Unit Converter/IndexUC.html" class="listlink">Unit Converter</a></li>
+		<li class="list"><a href="../Calculate Rental Cost/IndexCRC.html" class="listlink">Calculate Rental Cost</a></li>
+		<li class="list"><a href="../Bill Splitter/IndexBS.html" class="listlink">Bill Splitter</a></li>
+		<li class="list"><a href="../Calculate the final Order Price/IndexCFOP.html" class="listlink">Calculate the Final Cost</a></li>
+		<li class="list"><a href="../Calculate the Percentage of the Discount/IndexCPD.html" class="listlink">Calculate the Percentage of the Discount</a></li>
+		<li class="list"><a href="../Generate a random number/IndexGRM.html" class="listlink">Generate a Randum Number</a></li>
+		<li class="list"><a href="../Build a banking application/IndexBank.html" class="listlink">A Small Banking App</a></li>
+		<li class="list"><a href="../Change Text on button click/IndexCTB.html" class="listlink">Cange Text a button click</a></li>
+		<li class="list"><a href="../Validate Passward/IndexVP.html" class="listlink">Validate Passward</a></li>
+          <li class="list"><a href="../Dynamically Adding List Items To An Ordered List/indexD.html" class="listlink">Dynamically Adding List</a></li>
+          <li class="list"><a href="../TODO App/indexTD.html" class="listlink">TODO APP</a></li>
+          <li class="list"><a href="../Progress Bar/indexPB.html" class="listlink">Progress Bar</a></li>
+          <li class="list"><a href="../Change the color on click/indexCCC.html" class="listlink">Change the Color on click</a></li>
+          <li class="list"><a href="../Text Highlighting/indexTH.html" class="listlink">Text Highlighting</a></li>
+          <li class="list"><a href="../Move the Image/indexMI.html" class="listlink">Move the Image</a></li>
+	</ul>
+  </nav>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Click Me</button>  
+  </div>
+  
+      <!-- Bill Splittre HTML Start  -->
+<section>
+	<header>
+		<h1>
+			Bill Splitter
+		</h1>
+	</header>
+	<main>
+		<div id="in-screens">
+			<div id="in-1">
+				<span>
+					<label for="dishes">How many dishes are serevd : </label>
+					<input type="number" name="" id="dishes">
+				</span>
+				<button type="button" id="btn-dishes">Submit</button>
+			</div>
+			<div id="in-2">
+				<header>
+					<h3>Give price of each dish</h3>
+				</header>
+				<div id="in-2-main">
+				
+				</div>
+				<footer id="in-2-footer">
+					<button type="button" id="btn-dish-price">Submit</button>
+				</footer>
+			</div>
+			<div id="in-3" id="btn-price">
+				<span>
+					<label for="peoples">How many peoples are sharing : </label>
+					<input type="number" name="" id="peoples">
+				</span>
+				<button type="button" id="btn-peoples">Submit</button>
+			</div>
+		</div>
+		<div id="op-screen">
+			<p id="total-bill">
+				<!-- Total bill : <span>200rs</span> -->
+			</p>
+			<p id="each-person-bill">
+				<!-- Bill to be paid by each person in group : <span>20rs</span> -->
+			</p>
+		</div>
+	</main>
+</section>
+</body>
+    <script src="./ScriptBS.js"></script>
+</html>

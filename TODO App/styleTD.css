@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: 'Josefin Sans', sans-serif;
+     box-sizing: border-box;
+ }
+ 
+ /* Header */
+ 
+ body {
+     font-family: "Lato", sans-serif;
+   }
+   li {
+       list-style: none;
+   }
+   
+   .sidebar {
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
+     top: 0;
+     left: 0;
+     background-color: #111;
+     overflow-x: hidden;
+     transition: 0.5s;
+     padding-top: 60px;
+   }
+   
+   .sidebar a {
+     padding: 8px 8px 8px 32px;
+     text-decoration: none;
+     font-size: 25px;
+     color: #818181;
+     display: block;
+     transition: 0.3s;
+   }
+   
+   .sidebar a:hover {
+     color: #f1f1f1;
+   }
+   
+   .sidebar .closebtn {
+     position: absolute;
+     top: 0;
+     right: 25px;
+     font-size: 36px;
+     margin-left: 50px;
+   }
+   
+   .openbtn {
+     font-size: 20px;
+     cursor: pointer;
+     background-color: #111;
+     color: white;
+     padding: 10px 15px;
+     border: none;
+   }
+   
+   .openbtn:hover {
+     background-color: #444;
+   }
+   
+   #main {
+    margin-left: -200px;
+     transition : margin-left .5s;
+     padding: 16px;
+   }
+   
+   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+   @media screen and (max-height: 450px) {
+     .sidebar {padding-top: 15px;}
+     .sidebar a {font-size: 18px;}
+   }
+ 
+   /* TODO APP Style */
+
+   /* Josefin sans font  */
+ 
+:root{
+	/* body */
+	--B-main-bgc : hsl(235, 21%, 11%);
+
+	/* header of body */
+	--HofB-font-color : white;
+
+	/* main of body */
+	--MofB-width : 600px;
+
+	/* new input box */
+	--NIB-padding : 16px 15px;
+	--NIB-gap : 10px;
+	--NIB-bgc : hsl(235, 24%, 19%);
+
+	/* head circle of new input box */
+	--cmn-circle-width : 15px;
+	--cmn-circle-height : 15px;
+
+	/* input new todo of new input box*/
+	--INTofNIB-width : 475px;
+	--INTofNIB-color : hsl(234, 39%, 85%);
+	--INTofNIB-font-size : 22px;
+	--INTofNIB-caret-color : hsl(220, 98%, 61%);
+
+	/* button 'add' task of new input box */
+	--BATofNIB-padding : 5px 10px 2.5px 10px;
+	--BATofNIB-right : 15px;
+	--BATofNIB-border : 2px solid hsl(280, 87%, 65%);
+	--BATofNIB-color : hsl(220, 98%, 61%);
+	--BATofNIB-font-size : 18px;
+
+	/* list items section*/
+	--LIS-bgc : hsl(235, 24%, 19%);
+
+	/* each single task */
+	--EST-padding : 12px 15px;
+	--EST-gap : 15px;
+	--EST-border-bottom : 0.5px solid hsl(237, 14%, 26%);
+	--EST-font-size : 18px;
+}
+body{
+	padding: 40px 0px 20px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+
+	background-color: var(--B-main-bgc);
+}
+#bgc{
+	min-width: 100vw;
+	height: 40vh;
+	position: fixed;
+	top: 0;
+
+	z-index: -1;
+}
+/* header of body ******************************************************** */
+body > header > h1{
+	color: var(--HofB-font-color);
+	letter-spacing: 10px;
+}
+/* main of body ******************************************************** */
+body > main{
+	width: var(--MofB-width);
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+/* new input box */
+#new-todo{
+	position: relative;
+	padding: var(--NIB-padding);
+	display: flex;
+	align-items: center;
+	gap: var(--NIB-gap);
+
+	background-color: var(--NIB-bgc);
+	border-radius: 5px;
+}
+/* head circle of new input box */
+.head-circle{
+	width: var(--cmn-circle-width);
+	height: var(--cmn-circle-height);
+
+	background: transparent;
+	border: 0.5px solid  rgba(119, 122, 146, 0.75);
+	border-radius: 50%;
+}
+/* input new todo of new input box*/
+#in-new-todo{
+	width: var(--INTofNIB-width);
+
+ 	background-color: transparent;
+ 	border: none;
+
+	color: var(--INTofNIB-color);
+	font-size: var(--INTofNIB-font-size);
+	caret-color: var(--INTofNIB-caret-color);
+}
+#in-new-todo:focus{
+	outline: none;
+}
+/* button 'add' task of new input box */
+#btn-add-task{
+	padding: var(--BATofNIB-padding);
+	position: absolute;
+	right: var(--BATofNIB-right);
+
+	background-color: transparent;
+	border: var(--BATofNIB-border);
+	border-radius: 10px;
+
+	color: var(--BATofNIB-color);
+	font-size: var(--BATofNIB-font-size);
+	cursor: pointer;
+}
+/* list items section*/
+body > main > section{
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--LIS-bgc);
+	border-radius: 5px;
+}
+/* task screen for each task of completed , active   */
+#task-screen{
+	display: flex;
+	flex-direction: column;
+}
+/* each single task */
+.box{
+	position: relative;
+	padding: var(--EST-padding);
+	display: flex;
+	align-items: center;
+	gap: var(--EST-gap);
+
+	border-bottom: var(--EST-border-bottom);
+
+	font-size: var(--EST-font-size);
+	cursor: move;
+	overflow-x: auto;
+}
+/* active task circle */
+.active-circle{
+	width: var(--cmn-circle-width);
+	height: var(--cmn-circle-height);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: transparent;
+	border: 0.5px solid  rgba(119, 122, 146, 0.75);
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+/* check tick not visisible if task is active */
+.active-circle > img{
+	display: none;
+}
+/* hover effect on circle of  active task */
+.active-circle:hover{
+	background: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	border: none;
+}
+.active-circle:hover > .small-circle{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: hsl(235, 24%, 19%);
+}
+
+/* completed task circle */
+.completed-circle{
+	width: 15px;
+	height: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* info of tsak is active */
+.box > .info{
+	color: hsl(234, 39%, 85%);
+}
+/* info of task is completed*/
+.box > .info > del{
+	color: hsl(233, 14%, 35%);
+}
+
+/* delete option for both task active and completed */
+.cross{
+	height: 16px;
+	position: absolute;
+	top: 14px;
+	right: 15px;
+	display: none;
+
+	cursor: pointer;
+}
+.cross > img{
+	width: 15px;
+	height: 15px;
+}
+.cross > img:nth-child(2){
+	display: none;
+}
+.cross:hover > img:nth-child(1){
+	display: none;
+}
+.cross:hover > img:nth-child(2){
+	display: block;
+}
+/* this gray cross visible only if box is hovered and if this cross hovered then color of cross will change */
+.box:hover > .cross{
+	display: block;
+}
+
+/* footer of cection  */
+section > footer{
+	padding: var(--EST-padding);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: hsl(233, 14%, 50%);
+	font-size: 14px;
+}
+.Mdiv{
+  width: 1000px;
+}

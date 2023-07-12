@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  li {
+      list-style: none;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition : margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+/*Calculate the Final Cost */
+
+/* Sono font  */
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@400;500;600;700;800&display=swap');
+
+/* Main Parrt CSS */
+
+section{
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	background-color: #f0e7e7;
+}
+header > h1{
+	color: black;
+	text-transform: capitalize;
+}
+main{
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 200px;
+}
+#top{
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	gap: 10px	;
+}
+.item{
+	width: auto;
+	padding: 5px;
+	background-color: rgb(240, 229, 229);
+	border: 1.5px solid rgb(36, 34, 34);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+img:hover{
+	padding: 20px;
+}
+img {
+	width: 200px;
+	height: 150px;
+}
+.name{
+	display: flex;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.Mitem{
+	width: 270px;
+	background-color: #dad0d0;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+.info{
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+	color: rgb(35, 31, 31);
+}
+.info > button{
+	width: 70px;
+	height: 30px;
+	background-color: gold;
+	
+	border-radius: 10px;
+	cursor: pointer;
+	border: 2px solid black;
+}
+#price{
+	margin-right: 150px;
+	margin-left: 30px;
+}
+
+/* bottom of main section */
+#bottom{
+	display: flex;
+	gap: 20px;
+	margin-top: 100px;
+}
+#left{
+	width: calc(45vw);
+}
+
+/* table */
+/* we use class and make both table left and right */
+.table{
+	position: relative;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid rgb(23, 22, 22) ;
+}
+/* header of table */
+.heading-table{
+	padding: 8px 5px ;
+	display: flex;
+	justify-content: space-between;
+
+	background-color: rgb(116, 200, 196);
+	/* border: 2px solid red; */
+}
+.heading-table > h4{
+	/* border: 1px solid blue; */
+
+	color: black;
+	font-size: 18px;
+}
+.heading-table > h4:nth-child(4){
+	width: 150px;
+}
+/* main of table */
+.main-table{
+	padding: 0px 5px;
+	display: flex;
+	flex-direction: column;
+}
+.main-row{
+	padding: 6px 0px;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: space-between;
+}
+.main-row > h4{
+	/* border: 1px solid gold; */
+
+	font-weight: 800;
+	font-weight: 200;
+	text-align: center;
+}
+.main-row > h4:nth-child(1), .heading-table > h4:nth-child(1){
+	width: 82px;
+}
+.main-row > h4:nth-child(2), .heading-table > h4:nth-child(2){
+	width: 103px;
+}
+.main-row > h4:nth-child(3), .heading-table > h4:nth-child(3){
+	width: 90px;
+}
+.main-row > h4:nth-child(4), .heading-table > h4:nth-child(4){
+	width: 150px;
+	text-align: start;
+}
+hr{
+	width: 45vw;
+	align-self: center;
+}
+/* footer of table */
+.footer-table{
+	padding: 8px 5px ;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+
+	background-color: rgb(116, 200, 196);
+}
+
+.footer-table > h4 > span{
+	color: rgba(237, 35, 25, 0.984);
+}
+

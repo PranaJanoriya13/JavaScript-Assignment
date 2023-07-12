@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project|Remove Duplic</title>
+    <link rel="stylesheet" href="./StyleRD.css">
+</head>
+<body>
+    <!-- Header  -->
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <nav>
+      <ul>
+		<li class="list"><a href="../Passward Validater/IndexP.html" class="listlink">Passward Validater</a></li>
+		<li class="list"><a href="../Calculator/IndexC.html" class="listlink">Calculatar</a></li>
+		<li class="list"><a href="../Color Mixer/IndexCM.html" class="listlink">Color Mixer</a></li>
+		<li class="list"><a href="../Highest Marks/IndexHM.html" class="listlink">Highest Marks</a></li>
+		<li class="list"><a href="../Capitailze/IndexCa.html" class="listlink">Capitailze</a></li>
+		<li class="list"><a href="../Vowel Counter/IndexV.html" class="listlink">Vowel Counter</a></li>
+		<li class="list"><a href="../Remove Duplicate/IndexRD.html" class="listlink">Remove Duplicate</a></li>
+		<li class="list"><a href="../Inverted Right Angle Triangle Pa. with Asterisks/IndexRAT.html" class="listlink">Triangle Magic </a></li>
+		<li class="list"><a href="../Chesk for divisibility/IndexCD.html" class="listlink">Check for divisibility</li>
+		<li class="list"><a href="../Correct a Bug/IndexCB.html" class="listlink">Correct a Bug </a></li>
+		<li class="list"><a href="../Unit Converter/IndexUC.html" class="listlink">Unit Converter</a></li>
+		<li class="list"><a href="../Calculate Rental Cost/IndexCRC.html" class="listlink">Calculate Rental Cost</a></li>
+		<li class="list"><a href="../Bill Splitter/IndexBS.html" class="listlink">Bill Splitter</a></li>
+		<li class="list"><a href="../Calculate the final Order Price/IndexCFOP.html" class="listlink">Calculate the Final Cost</a></li>
+		<li class="list"><a href="../Calculate the Percentage of the Discount/IndexCPD.html" class="listlink">Calculate the Percentage of the Discount</a></li>
+		<li class="list"><a href="../Generate a random number/IndexGRM.html" class="listlink">Generate a Randum Number</a></li>
+		<li class="list"><a href="../Build a banking application/IndexBank.html" class="listlink">A Small Banking App</a></li>
+		<li class="list"><a href="../Change Text on button click/IndexCTB.html" class="listlink">Cange Text a button click</a></li>
+		<li class="list"><a href="../Validate Passward/IndexVP.html" class="listlink">Validate Passward</a></li>
+          <li class="list"><a href="../Dynamically Adding List Items To An Ordered List/indexD.html" class="listlink">Dynamically Adding List</a></li>
+          <li class="list"><a href="../TODO App/indexTD.html" class="listlink">TODO APP</a></li>
+          <li class="list"><a href="../Progress Bar/indexPB.html" class="listlink">Progress Bar</a></li>
+          <li class="list"><a href="../Change the color on click/indexCCC.html" class="listlink">Change the Color on click</a></li>
+          <li class="list"><a href="../Text Highlighting/indexTH.html" class="listlink">Text Highlighting</a></li>
+          <li class="list"><a href="../Move the Image/indexMI.html" class="listlink">Move the Image</a></li>
+	</ul>
+  </nav>
+  </div>
+  
+  <div id="main">
+	<button class="openbtn" onclick="openNav()">☰ Click Me</button>  
+   </div>
+  
+      <!-- Remove Duplicate  -->
+	<h1>Remove Duplicate</h1>
+	<br>
+	<section class="RDclass">
+	<div class="left">
+		<div class="items">
+			<div class="item item-1">
+				<img src="./image/pngwing.com.png" alt="">
+				<div class="item-info">
+					<p>100$</p>
+					<button type="button" onclick="addItem('item_1')" id="black">Add Product</button>
+				</div>
+			</div>
+			<div class="item item-2">
+				<img src="./image/pngwing.com (5).png" alt="">
+				<div class="item-info">
+					<p>200$</p>
+					<button type="button" onclick="addItem('item_2')" id="blue">Add Product</button>
+				</div>
+			</div>
+			<div class="item item-3">
+				<img src="./image/pngwing.com (3).png" alt="">
+				<div class="item-info">
+					<p>300$</p>
+					<button type="button" onclick="addItem('item_3')" id="red">Add Product</button>
+				</div>
+			</div>
+			<div class="item item-4">
+				<img src="./image/pngwing.com (2).png" alt="">
+				<div class="item-info">
+					<p>400$</p>
+					<button type="button" onclick="addItem('item_4')" id="white">Add Product</button>
+				</div>
+			</div>
+			<div class="item item-5">
+				<img src="./image/pngwing.com (4).png" alt="">
+				<div class="item-info">
+					<p>500$</p>
+					<button type="button" onclick="addItem('item_5')" id="yellow">Add Product</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<header>
+			<h1>Cart</h1>
+		</header>
+		<main>
+			<div id="added-item-list">
+				<header class="item-list-head">
+					<p class="sr-no-head">Sr.No.</p>
+					<p class="pro-name-head">Product Name</p>
+					<p class="pro-price-head">Product Price($)</p>
+				</header>
+				<div id="item-list" class="item-list-show">	
+				</div>
+				<footer class="total">
+					<p class="total-quantity" id="TQ-s">Total Quantity : </p>
+					<p class="total-quantity" id="TA-s">Total Ammount : </p>
+				</footer>
+
+			</div>
+		</main>
+		<button type="button" onclick="removeDupliItem()">Remove Duplicate's</button>
+
+		<div id="removed-duplicate">
+			<div class="item-list-head">
+				<p class="sr-no-head">Sr.No.</p>
+				<p class="pro-name-head">Product Name</p>
+				<p class="pro-price-head">Product Price($)</p>
+			</div>
+			<div id="item-list-duplicate" class="item-list-show">
+				<!-- <div id="item-list-row-1" class="item-list-row">
+					 <p class="sr-no">01</p>
+					<p class="pro-name">Black</p>
+					<p class="pro-price">10.00$</p>
+				</div> -->	
+			</div>
+			<footer class="total">
+				<p class="total-quantity" id="TQ-d">Total Quantity : </p>
+				<p class="total-quantity" id="TA-d">Total Ammount : </p>
+			</footer>
+		</div>
+	</div>
+</section>
+
+</body>
+    <script src="./ScriptRD.js"></script>
+</html>
