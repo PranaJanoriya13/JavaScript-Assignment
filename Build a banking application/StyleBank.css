@@ -85,7 +85,7 @@ section{
 	align-items: center;
 	gap: 20px;
 	background-image: url("./Image/pngwing.com.png");
-	background-color: #44444463;
+	background-color: #44444477;
 }
 /* back button */
 #back{
@@ -99,14 +99,11 @@ section{
 	/* display: flex; */
 	align-items: center;
 	gap: 4px;
-
 	background-color: rgb(245, 212, 27);
 	border: 2px solid pink;
 	border-radius: 20px;
-
 	font-size: 22px;
 	font-weight: 600;
-
 	cursor: pointer;
 }
 /* section  */
@@ -116,7 +113,6 @@ section{
 	position: absolute;
 	top: 10px;
 	right: 20px;
-
 	background-color: gold;
 	border: 2px solid pink;
 	border-radius: 20px;
@@ -292,9 +288,7 @@ main{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	background-color: rgba(255, 255, 255, 0.25);
-
 	color: rgb(48, 47, 41);
 	font-size : 20px;
 }
@@ -304,11 +298,11 @@ main{
 	margin-top: 30px;
 	padding: 40px 50px;
 	border-radius: 40px;
-
 	box-shadow: 2px 2px 2px pink , -2px -2px 2px pink;
 }
 #div-balance > p{
-	color: white;
+	color: rgb(26, 24, 24);
+	font-weight: 700;
 	font-size: 35px;
 	line-height: 55px;
 	text-align: center;
@@ -316,8 +310,8 @@ main{
 #div-balance > p > span{
 	padding: 0px 3px 2px 3px;
 	border-bottom: 2px solid white;
-
-	color: rgb(48, 47, 41)
+	font-size: 45px;
+	color: rgb(245, 59, 12)
 }
 
 
